@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(37, 150, 190);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  color: beige;
+  letter-spacing: 1rem;
+  margin-bottom: .5%;
+  padding-left: 4%;
+  margin-top: .5%;
+  text-shadow: .5px .5px 2px black;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 4%;
+}
+
+#button-black {
+  font-family: 'Bangers', cursive;
+  border-radius: 4px;
+  padding: .7rem;
+  font-size: 1.2rem;
+  margin-bottom: 7%;
+  border: none;
+  letter-spacing: .1rem;
+  box-shadow: 0 0 2px;
+}
+
+#button-rainbow {
+  font-family: 'Bangers', cursive;
+  border-radius: 4px;
+  padding: .7rem;
+  font-size: 1.2rem;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border: none;
+  letter-spacing: .1rem;
+  box-shadow: 0 0 2px;
+}
+
+#button-reset {
+  font-family: 'Bangers', cursive;
+  border-radius: 4px;
+  padding: .7rem;
+  font-size: 1.2rem;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  border: none;
+  letter-spacing: .1rem;
+  box-shadow: 0 0 2px;
+}
+
+.paper {
+  background-color: beige;
+  height: 70vh;
+  width: 40vw;
+ display: grid;
+ margin-left: auto;
+ margin-right: auto;
+margin-top: 0;
+margin-bottom: 0;
+box-shadow: 0 0 3px;
+}
+
+.rangeSlider {
+  width: 100%;
+  margin-top: 20%;
+}
+
+.mySlider {
+  -webkit-appearance: none;
+  background: white;
+  width: 100%;
+  height: 10%;
+  opacity: 2;
+  border-radius: 10px;
+ }
+
+ .mySlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: black;
+  width: 13%;
+  height: 2.7vh;
+  border-radius: 12px;
+}
