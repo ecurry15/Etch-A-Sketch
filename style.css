@@ -125,6 +125,7 @@ box-shadow: 0 0 1px;
 margin-top: 0;
 margin-bottom: 0;
 box-shadow: 0 0 3px;
+
 }
 
 :root {
@@ -132,3 +133,6 @@ box-shadow: 0 0 3px;
   --grid-rows: 1;
 }
 
+#grid-item {
+ user-select: none;
+}
