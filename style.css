@@ -29,13 +29,14 @@ body {
   width: 10%;
   position: absolute;
   margin-left: 12%;
-  margin-top: 4%;
+  margin-top: 8%;
+  text-align: center;
 }
 
 #button-black {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .7rem;
+  padding: .6rem;
   font-size: 1.2rem;
   margin-bottom: 7%;
   border: none;
@@ -46,7 +47,7 @@ body {
 #button-rainbow {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .7rem;
+  padding: .6rem;
   font-size: 1.2rem;
   margin-top: 7%;
   margin-bottom: 7%;
@@ -55,10 +56,10 @@ body {
   box-shadow: 0 0 2px;
 }
 
-#button-reset {
+#button-eraser {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .7rem;
+  padding: .6rem;
   font-size: 1.2rem;
   margin-top: 7%;
   margin-bottom: 5%;
@@ -67,16 +68,16 @@ body {
   box-shadow: 0 0 2px;
 }
 
-.paper {
-  background-color: beige;
-  height: 70vh;
-  width: 40vw;
- display: grid;
- margin-left: auto;
- margin-right: auto;
-margin-top: 0;
-margin-bottom: 0;
-box-shadow: 0 0 3px;
+#button-reset {
+  font-family: 'Bangers', cursive;
+  border-radius: 4px;
+  padding: .6rem;
+  font-size: 1.2rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  border: none;
+  letter-spacing: .1rem;
+  box-shadow: 0 0 2px;
 }
 
 .rangeSlider {
@@ -88,16 +89,46 @@ box-shadow: 0 0 3px;
   -webkit-appearance: none;
   background: white;
   width: 100%;
-  height: 10%;
+  height: 3%;
   opacity: 2;
   border-radius: 10px;
+  box-shadow: 0 0 4px;
  }
 
  .mySlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
   background: black;
-  width: 13%;
+  width: 14%;
   height: 2.7vh;
-  border-radius: 12px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px;
 }
+
+#sliderText {
+  font-family: 'Bangers', cursive;
+font-size: 1.5rem;
+background-color: white;
+padding-left: 5%;
+padding-right: 6%;
+border-radius: 5px;
+box-shadow: 0 0 1px;
+}
+
+#paper {
+  background-color: beige;
+  height: 70vh;
+  width: 40vw;
+ display: grid;
+ margin-left: auto;
+ margin-right: auto;
+margin-top: 0;
+margin-bottom: 0;
+box-shadow: 0 0 3px;
+}
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
