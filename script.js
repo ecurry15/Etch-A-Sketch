@@ -2,9 +2,30 @@
 const rangeSlider = document.getElementById('sliderRange');
 const sliderOutput = document.getElementById('sliderText');
 sliderOutput.textContent = `${rangeSlider.value} x ${rangeSlider.value}`;
-
 const gridContainer = document.querySelector('#paper');
 let mousePressed = false;
+let mode = "blue";
+
+//BTNS ---
+const blackBtn = document.querySelector('#button-blue');
+const rainbowBtn = document.querySelector('#button-rainbow');
+const eraserBtn = document.querySelector('#button-eraser');
+const resetBtn = document.querySelector('#button-reset');
+
+// CHANGE MODE ON BTN CLICK ---
+blackBtn.addEventListener('click', function() {
+  mode = "blue";
+});
+
+rainbowBtn.addEventListener('click', function() {
+  mode = "rainbow";
+});
+
+eraserBtn.addEventListener('click', function() {
+  mode = "eraser";
+});
+
+
 
 
 
@@ -36,12 +57,21 @@ oldDivs.forEach((div) => div.remove());
     mousePressed = false;
   });
 
-  //IF MOUSE IS CLICKED CHANGE SQAURES TO BLUE ---
+  //IF MOUSE IS CLICKED CHANGE SQAURES TO SPECIFIED MODE/COLOR ---
   newDivs.forEach((div) => div.addEventListener('mousemove', function() {
-    if (mousePressed) {
+    if (mousePressed && mode === "blue") {
       div.style.backgroundColor = "rgb(6,57,112)";
+    } else if (mousePressed && mode === "rainbow") {
+      div.style.backgroundColor = "rgb(226,135,67)";
+    } else if (mousePressed && mode === "eraser") {
+      div.style.backgroundColor = "beige";
     }
-  }))
+  }));
+
+  //RESET ALL SQUARES TO BEIGE ---
+  resetBtn.addEventListener('click', function() {
+    newDivs.forEach((div) => div.style.backgroundColor = "beige");
+    });
 
 };
 
