@@ -80,6 +80,25 @@ body {
   box-shadow: 0 0 2px;
 }
 
+.active-Btn {
+  font-family: 'Bangers', cursive;
+  border-radius: 4px;
+  color: beige;
+  background-color: black;
+  padding: .6rem;
+  font-size: 1.2rem;
+  margin-bottom: 7%;
+  border: none;
+  letter-spacing: .1rem;
+  box-shadow: 0 0 2px;
+}
+
+/* Btn Hovers */
+button:hover {
+  width: 110%;
+}
+
+
 .rangeSlider {
   width: 100%;
   margin-top: 20%;

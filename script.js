@@ -7,22 +7,32 @@ let mousePressed = false;
 let mode = "blue";
 
 //BTNS ---
-const blackBtn = document.querySelector('#button-blue');
+const blueBtn = document.querySelector('#button-blue');
 const rainbowBtn = document.querySelector('#button-rainbow');
 const eraserBtn = document.querySelector('#button-eraser');
 const resetBtn = document.querySelector('#button-reset');
 
+
 // CHANGE MODE ON BTN CLICK ---
-blackBtn.addEventListener('click', function() {
+blueBtn.addEventListener('click', function() {
   mode = "blue";
+blueBtn.classList.add("active-Btn");
+rainbowBtn.classList.remove("active-Btn");
+eraserBtn.classList.remove("active-Btn");
 });
 
 rainbowBtn.addEventListener('click', function() {
   mode = "rainbow";
+  rainbowBtn.classList.add("active-Btn");
+blueBtn.classList.remove("active-Btn");
+eraserBtn.classList.remove("active-Btn");
 });
 
 eraserBtn.addEventListener('click', function() {
   mode = "eraser";
+  eraserBtn.classList.add("active-Btn");
+rainbowBtn.classList.remove("active-Btn");
+blueBtn.classList.remove("active-Btn");
 });
 
 
@@ -62,7 +72,8 @@ oldDivs.forEach((div) => div.remove());
     if (mousePressed && mode === "blue") {
       div.style.backgroundColor = "rgb(6,57,112)";
     } else if (mousePressed && mode === "rainbow") {
-      div.style.backgroundColor = "rgb(226,135,67)";
+      const randomColor = Math.floor(Math.random()*16777215).toString(16);
+      div.style.backgroundColor = `#${randomColor}`;
     } else if (mousePressed && mode === "eraser") {
       div.style.backgroundColor = "beige";
     }
