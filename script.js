@@ -13,6 +13,7 @@ const eraserBtn = document.querySelector('#button-eraser');
 const resetBtn = document.querySelector('#button-reset');
 
 
+
 // CHANGE MODE ON BTN CLICK ---
 blueBtn.addEventListener('click', function() {
   mode = "blue";
@@ -34,7 +35,6 @@ eraserBtn.addEventListener('click', function() {
 rainbowBtn.classList.remove("active-Btn");
 blueBtn.classList.remove("active-Btn");
 });
-
 
 
 
@@ -86,6 +86,12 @@ oldDivs.forEach((div) => div.remove());
 
 };
 
+//MAKES SKETCH PAD START WITH 16X16 SQUARES/DIVS ---
+let makeFirstSquares = function () {
+  makeRows(16, 16);
+}
+
+
 
 //DISPLAYS RANGE SLIDER INPUT AND MAKES ROWS/COLS---
 rangeSlider.oninput = function () {
@@ -93,7 +99,7 @@ rangeSlider.oninput = function () {
   makeRows(this.value, this.value);
 }
 
-
+makeFirstSquares();
 
 
 
