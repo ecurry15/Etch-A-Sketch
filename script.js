@@ -4,7 +4,9 @@ const sliderOutput = document.getElementById('sliderText');
 sliderOutput.textContent = `${rangeSlider.value} x ${rangeSlider.value}`;
 const gridContainer = document.querySelector('#paper');
 let mousePressed = false;
+let screenPressed = false;
 let mode = "blue";
+
 
 //BTNS ---
 const blueBtn = document.querySelector('#button-blue');
@@ -63,11 +65,34 @@ oldDivs.forEach((div) => div.remove());
     mousePressed = true;
   });
 
+  document.addEventListener('touchstart', function() {
+    console.log("yea");
+screenPressed = true;
+  })
+
   document.addEventListener('mouseup', function() {
     mousePressed = false;
+    
   });
 
-  //IF MOUSE IS CLICKED CHANGE SQAURES TO SPECIFIED MODE/COLOR ---
+  document.addEventListener('touchend', function() {
+    console.log("no");
+    screenPressed = false;
+  })
+
+  //MOUSE CLICK CHANGES SQAURES TO SPECIFIED MODE/COLOR ---
+  newDivs.forEach((div) => div.addEventListener('click', function() {
+    if (mode === "blue") {
+      div.style.backgroundColor = "rgb(6,57,112)";
+    } else if (mode === "rainbow") {
+      const randomColor = Math.floor(Math.random()*16777215).toString(16);
+      div.style.backgroundColor = `#${randomColor}`;
+    } else if (mode === "eraser") {
+      div.style.backgroundColor = "beige";
+    }
+  }));
+
+  //MOUSE DRAG CHANGES SQAURES TO SPECIFIED MODE/COLOR ---
   newDivs.forEach((div) => div.addEventListener('mousemove', function() {
     if (mousePressed && mode === "blue") {
       div.style.backgroundColor = "rgb(6,57,112)";
@@ -78,6 +103,19 @@ oldDivs.forEach((div) => div.remove());
       div.style.backgroundColor = "beige";
     }
   }));
+
+//FOR MOBILE --- WHEN SCREEN IS TOUCHED SQUARES TURN TO SPECIFIED MODE/COLOR ---
+  newDivs.forEach((div) => div.addEventListener('touchmove', function() {
+    if (screenPressed && mode === "blue") {
+      div.style.backgroundColor = "rgb(6,57,112)";
+    } else if (screenPressed && mode === "rainbow") {
+      const randomColor = Math.floor(Math.random()*16777215).toString(16);
+      div.style.backgroundColor = `#${randomColor}`;
+    } else if (screenPressed && mode === "eraser") {
+      div.style.backgroundColor = "beige";
+    }
+  }));
+
 
   //RESET ALL SQUARES TO BEIGE ---
   resetBtn.addEventListener('click', function() {
