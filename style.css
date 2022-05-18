@@ -163,7 +163,7 @@ box-shadow: 0 0 3px;
 }
 
 /*MEDIA QUERIES ---
-AS SCREEN GETS SMALLER ---- */
+AS SCREEN GETS SMALLER  1---- */
 @media (max-width: 1165px){
   #button-blue {
     font-size: .9rem;
@@ -198,7 +198,7 @@ AS SCREEN GETS SMALLER ---- */
 }
 }
 
-/* -----   */
+/* -----  2 */
 @media (max-width: 950px) {
   #paper {
     width: 360px;
@@ -210,7 +210,7 @@ AS SCREEN GETS SMALLER ---- */
   }
 }
 
-/* -----   */
+/* -----  3 */
 @media (max-width: 800px) {
   #paper {
     width: 330px;
@@ -242,7 +242,7 @@ AS SCREEN GETS SMALLER ---- */
   }
 }
 
-/* -----   */
+/* -----  4 */
 @media (max-width: 653px) {
   .settings {
     position: relative;
@@ -272,7 +272,7 @@ font-size: 1rem;
     }
 }
 
-/* -----   */
+/* -----  5 */
 @media (max-width: 428px) {
 .title {
   font-size: 2rem;
