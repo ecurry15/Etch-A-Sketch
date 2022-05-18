@@ -243,7 +243,7 @@ AS SCREEN GETS SMALLER ---- */
 }
 
 /* -----   */
-@media (max-width: 630px) {
+@media (max-width: 653px) {
   .settings {
     position: relative;
     width: 138px;
