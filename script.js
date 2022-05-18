@@ -66,7 +66,6 @@ oldDivs.forEach((div) => div.remove());
   });
 
   document.addEventListener('touchstart', function() {
-    console.log("yea");
 screenPressed = true;
   })
 
@@ -76,7 +75,6 @@ screenPressed = true;
   });
 
   document.addEventListener('touchend', function() {
-    console.log("no");
     screenPressed = false;
   })
 

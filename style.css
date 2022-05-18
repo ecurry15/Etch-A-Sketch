@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 }
 
 .title {
@@ -26,17 +28,18 @@ body {
 .settings {
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 138px;
   position: absolute;
   margin-left: 12%;
   margin-top: 8%;
   text-align: center;
 }
 
+/* Btns */
 #button-blue {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .6rem;
+  padding: .5rem;
   font-size: 1.2rem;
   margin-bottom: 7%;
   border: none;
@@ -47,7 +50,7 @@ body {
 #button-rainbow {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .6rem;
+  padding: .5rem;
   font-size: 1.2rem;
   margin-top: 7%;
   margin-bottom: 7%;
@@ -59,7 +62,7 @@ body {
 #button-eraser {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .6rem;
+  padding: .5rem;
   font-size: 1.2rem;
   margin-top: 7%;
   margin-bottom: 5%;
@@ -71,7 +74,7 @@ body {
 #button-reset {
   font-family: 'Bangers', cursive;
   border-radius: 4px;
-  padding: .6rem;
+  padding: .5rem;
   font-size: 1.2rem;
   margin-top: 10%;
   margin-bottom: 5%;
@@ -93,15 +96,16 @@ body {
   box-shadow: 0 0 2px;
 }
 
-/* Btn Hovers */
+
 button:hover {
   width: 110%;
 }
+/* Btns END */
 
-
+/* RANGE SLIDER */
 .rangeSlider {
   width: 100%;
-  margin-top: 20%;
+  margin-top: 18%;
 }
 
 .mySlider {
@@ -133,11 +137,14 @@ padding-right: 6%;
 border-radius: 5px;
 box-shadow: 0 0 1px;
 }
+/* RANGE SLIDER END*/
 
 #paper {
   background-color: beige;
-  height: 70vh;
-  width: 40vw;
+  height: 500px;
+  max-height: 900px;
+  width: 500px;
+  max-width: 800px;
  display: grid;
  margin-left: auto;
  margin-right: auto;
@@ -154,3 +161,160 @@ box-shadow: 0 0 3px;
 #grid-item {
  user-select: none;
 }
+
+/*MEDIA QUERIES ---
+AS SCREEN GETS SMALLER ---- */
+@media (max-width: 1165px){
+  #button-blue {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-rainbow {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-eraser {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-reset {
+    font-size: .9rem;
+    letter-spacing: .1rem;
+  }
+  #paper {
+    width: 400px;
+    height: 400px;
+  }
+  .mySlider {
+    height: 1.8vh;
+  }
+  .mySlider::-webkit-slider-thumb {
+    width: 13%;
+    height: 2.8vh;
+    border-radius: 16px;
+}
+}
+
+/* -----   */
+@media (max-width: 950px) {
+  #paper {
+    width: 360px;
+    height: 360px;
+  }
+  .settings {
+    margin-left: 5%;
+    margin-top: 120px;
+  }
+}
+
+/* -----   */
+@media (max-width: 800px) {
+  #paper {
+    width: 330px;
+    height: 330px;
+    margin-right: 120px;
+  }
+  .settings {
+    margin-left: 2%;
+    margin-top: 120px;
+  }
+  #button-blue {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-rainbow {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-eraser {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-reset {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+}
+
+/* -----   */
+@media (max-width: 630px) {
+  .settings {
+    position: relative;
+    width: 138px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+order: 3;
+  }
+.title {
+  font-size: 2.7rem;
+  letter-spacing: .5rem;
+}
+#sliderText {
+font-size: 1rem;
+}
+.rangeSlider {
+  margin-top: 4%;
+    }
+    #paper {
+      margin-top: 10px;
+      width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    order: 2;
+    }
+}
+
+/* -----   */
+@media (max-width: 428px) {
+.title {
+  font-size: 2rem;
+  letter-spacing: .5rem;
+}
+}
+
+/* AS SCREEN GETS WIDER -----   */
+@media (min-width: 1500px) {
+  #paper {
+    width:580px;
+    height: 580px;
+  }
+  .settings {
+    margin-left: 20%;
+    margin-top: 120px;
+  }
+  .mySlider {
+    height: 2vh;
+  }
+  .rangeSlider {
+margin-top: 10%;
+  }
+  #button-blue {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-rainbow {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    overflow-wrap: break-word;
+  }
+  
+  #button-eraser {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+  
+  #button-reset {
+    font-size: .7rem;
+    letter-spacing: .1rem;
+  }
+}
+/* -----   */
